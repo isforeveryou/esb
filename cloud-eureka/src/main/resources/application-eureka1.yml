@@ -1,0 +1,16 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: eureka-server
+
+#eureka配置
+eureka:
+  instance:
+    hostname: eureka1.forever.com
+  client:
+    fetch-registry: true #与其他节点同步数据
+    register-with-eureka: false #不注册自己
+    service-url:
+      defaultZone: http://eureka2.forever.com:7002/eureka/,http://eureka3.forever.com:7003/eureka/
