@@ -12,6 +12,7 @@
         <module>cloud-eureka</module>
         <module>cloud-provider</module>
         <module>cloud-consumer</module>
+        <module>cloud-nacos-provider</module>
     </modules>
 
 
@@ -44,5 +45,19 @@
     </dependencyManagement>
 
 
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>maven-releases</id>-->
+<!--            <url>-->
+<!--                http://172.21.67.105:8081/repository/maven-releases/-->
+<!--            </url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>maven-snapshots</id>-->
+<!--            <url>-->
+<!--                http://172.21.67.105:8081/repository/maven-snapshots/-->
+<!--            </url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
 </project>
