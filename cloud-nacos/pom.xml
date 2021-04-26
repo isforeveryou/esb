@@ -9,17 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-eureka</artifactId>
+    <artifactId>cloud-nacos</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>eureka-server</module>
-        <module>eureka-consumer</module>
-        <module>eureka-provider</module>
+        <module>nacos-provider</module>
+        <module>nacos-consumer</module>
     </modules>
 
+
     <properties>
+        <nacos-client.version>1.1.0</nacos-client.version>
         <cloud-server-utils.version>1.0-SNAPSHOT</cloud-server-utils.version>
+        <spring-cloud-alibaba-nacos-discovery.version>0.2.2.RELEASE</spring-cloud-alibaba-nacos-discovery.version>
     </properties>
 
 
@@ -30,6 +31,18 @@
                 <artifactId>cloud-server-utils</artifactId>
                 <version>${cloud-server-utils.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${spring-cloud-alibaba-nacos-discovery.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+
 </project>

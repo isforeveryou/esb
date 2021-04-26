@@ -10,34 +10,44 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>cloud-eureka</module>
-        <module>cloud-provider</module>
-        <module>cloud-consumer</module>
-        <module>cloud-nacos-provider</module>
+        <module>cloud-nacos</module>
+        <module>cloud-server-api</module>
+        <module>cloud-server-utils</module>
     </modules>
+
+
+    <properties>
+        <!--springboot 2.2.2-->
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <!--springcloud Hoxton.SR1 与springBoot 2.2.2对应-->
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 
     <dependencyManagement>
         <dependencies>
-            <!--springboot 2.2.2-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.2.RELEASE</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--springcloud Hoxton.SR1 与springBoot 2.2.2对应-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR1</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
