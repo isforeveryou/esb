@@ -3,6 +3,7 @@ package com.forever.db;
 import com.alibaba.fastjson.JSON;
 import com.forever.api.entity.Artist;
 import com.forever.api.entity.Record;
+import com.forever.utils.FileUtils;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -30,7 +31,7 @@ public class ReadDataFileRunner implements ApplicationRunner {
     private void readArtistFile() {
         try {
             Map<Integer, Artist> artistTable = new HashMap<>(15);
-            BufferedReader reader = new BufferedReader(new FileReader(WriteScheduled.ARTIST_TABLE_PATH));
+            BufferedReader reader = new BufferedReader(new FileReader(FileUtils.getFile(WriteScheduled.ARTIST_TABLE_PATH)));
 
             String line;
             int readLine = 0;
@@ -53,7 +54,7 @@ public class ReadDataFileRunner implements ApplicationRunner {
     private void readRecordFile() {
         try {
             Map<Integer, Record> recordTable = new HashMap<>(60);
-            BufferedReader reader = new BufferedReader(new FileReader(WriteScheduled.RECORD_TABLE_PATH));
+            BufferedReader reader = new BufferedReader(new FileReader(FileUtils.getFile(WriteScheduled.RECORD_TABLE_PATH)));
 
             String line;
             int readLine = 0;

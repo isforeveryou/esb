@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2021/4/15 11:20
  */
 @RestController
-@RequestMapping(value = "/provider")
+@RequestMapping(value = "/nacos/provider")
 public class ProviderController {
 
     @RequestMapping(value = "/select/artist")

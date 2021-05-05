@@ -3,6 +3,7 @@ package com.forever.db;
 import com.alibaba.fastjson.JSON;
 import com.forever.api.entity.Artist;
 import com.forever.api.entity.Record;
+import com.forever.utils.FileUtils;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -37,7 +38,7 @@ public class WriteScheduled {
                 if (stringBuilder.length() <= 0) {
                     System.out.println("ArtistWriteTask:artist table is empty,not need write to artist file");
                 } else {
-                    FileWriter fileWriter = new FileWriter(ARTIST_TABLE_PATH);
+                    FileWriter fileWriter = new FileWriter(FileUtils.getFile(ARTIST_TABLE_PATH));
                     fileWriter.write(stringBuilder.toString());
                     fileWriter.close();
                     artistTable.setWriteStatus(false);
@@ -65,7 +66,7 @@ public class WriteScheduled {
                 if (stringBuilder.length() <= 0) {
                     System.out.println("RecordWriteTask:record table is empty,not need write to record file");
                 } else {
-                    FileWriter fileWriter = new FileWriter(RECORD_TABLE_PATH);
+                    FileWriter fileWriter = new FileWriter(FileUtils.getFile(RECORD_TABLE_PATH));
                     fileWriter.write(stringBuilder.toString());
                     fileWriter.close();
                     recordTable.setWriteStatus(false);

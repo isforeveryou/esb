@@ -18,9 +18,9 @@
 
 
     <properties>
-        <nacos-client.version>1.1.0</nacos-client.version>
+        <nacos-client.version>1.4.1</nacos-client.version>
         <cloud-server-utils.version>1.0-SNAPSHOT</cloud-server-utils.version>
-        <spring-cloud-alibaba-nacos-discovery.version>0.2.2.RELEASE</spring-cloud-alibaba-nacos-discovery.version>
+        <spring-cloud-alibaba-nacos-discovery.version>2.2.1.RELEASE</spring-cloud-alibaba-nacos-discovery.version>
     </properties>
 
 
@@ -37,7 +37,7 @@
                 <version>${nacos-client.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
+                <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${spring-cloud-alibaba-nacos-discovery.version}</version>
             </dependency>
